@@ -29,12 +29,3 @@ if opencv_image is not None:
     cv2.circle(marked_image, (start_x, start_y), circle_thickness, (0,255,0),-1)
     cv2.circle(marked_image, (finish_x, finish_y), circle_thickness, (255,0,0),-1)
     st.image(marked_image, channels="RGB", width=800)
-
-# if marked_image is not None:
-#     if st.button('Решить лабиринт'):
-#         with st.spinner('Solving your maze'):
-#             path = maze.find_shortest_path(opencv_image,(start_x, start_y),(finish_x, finish_y))
-#         pathed_image = opencv_image.copy()
-#         path_thickness = (pathed_image.shape[0]+pathed_image.shape[0])//2//100
-#         maze.drawPath(pathed_image, path, path_thickness)
-#         st.image(pathed_image, channels="RGB", width=800)
